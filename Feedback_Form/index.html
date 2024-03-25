@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rewallet | Register</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+  </head>
+
+  <body>
+    <header>
+    </header>
+    <main>
+      <section>
+        <div class="wrapper">
+          <form
+            action="//httpbin.org/post"
+            method="POST"
+            autocomplete="on"
+            enctype="application/x-www-form-urlencoded"
+            name="register"
+            class="dark form"
+          >
+            <fieldset class="form--header">
+              <h1>Sign up</h1>
+            </fieldset>
+            <fieldset class="form--main-top">
+              <legend>Personal information</legend>
+              <label for="username">
+                Name
+                <input
+                  id="username"
+                  type="text"
+                  maxlength="50"
+                  placeholder="Your Name"
+                  required
+                  class="required"
+                  name="username"
+                />
+              </label>
+
+              <label for="bdate">
+                Date of birth
+                <!-- Как покрасить текс плейсходера даты в белый?-->
+                <input
+                  id="bdate"
+                  type="date"
+                  required
+                  class="required"
+                  name="birth_date"
+                />
+              </label>
+              <div>
+                <p>Gender</p>
+
+                <ul class="form--gender">
+                  <li>
+                    <label for="Male" class="form--gender--label">
+                      Male
+                      <input
+                        id="Male"
+                        type="radio"
+                        name="gender"
+                        value="Male"
+                      />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="Female" class="form--gender--label">
+                      Female
+                      <input
+                        id="Female"
+                        type="radio"
+                        name="gender"
+                        value="Female"
+                      />
+                    </label>
+                  </li>
+                  <li>
+                    <label for="not_set" class="form--gender--label">
+                      Prefer not to say
+                      <input
+                        id="not_set"
+                        type="radio"
+                        name="gender"
+                        value="not_set"
+                      />
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <label for="password">
+                Password
+                <input
+                  id="password"
+                  type="password"
+                  minlength="8"
+                  maxlength="32"
+                  required
+                  class="required"
+                  placeholder="S0mething_funny!"
+                  name="password"
+                />
+              </label>
+            </fieldset>
+            <fieldset class="form--main-mid">
+              <legend>Your contacts</legend>
+              <label for="email">
+                Email
+                <input
+                  name="email"
+                  id="email"
+                  type="email"
+                  required
+                  class="required"
+                  placeholder="Mike_123!@rewallet.com"
+                />
+              </label>
+              <label for="tel">
+                Phone number
+                <!-- pattern американский тк я не знаю как писать "+" и "()" (и не знаю структуру русских номеров)-->
+                <input
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="123-456-7890"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                />
+              </label>
+              <label
+                for="time"
+                title="Shift+click to select multiple"
+                class="form--time"
+              >
+                When should we call You
+                <!-- Как покрасить текс плейсходера в белый?-->
+                <select
+                  name="time"
+                  id="time"
+                  multiple
+                  required
+                  class="required"
+                >
+                  <option value="morning">Morning</option>
+                  <option value="noon">Noon</option>
+                  <option value="evening">Evening</option>
+                  <option value="night">Night</option>
+                </select>
+              </label>
+            </fieldset>
+            <fieldset class="form--footer">
+              <input type="submit" name="submit" class="btn submit--btn">
+
+              </button>
+              <button type="reset" name="reset" class="btn reset--btn">
+                Reset
+              </button>
+              <a href="./back.php">Get_headers </a>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    
+  </body>
+</html>

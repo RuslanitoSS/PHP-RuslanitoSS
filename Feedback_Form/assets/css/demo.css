@@ -1,0 +1,87 @@
+.card-container {
+    perspective: 500px;
+
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+.card {
+    width: 300px;
+    height: 400px;
+}
+
+.fzont,
+.back {
+    box-shadow: 0 1px 6px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+
+}
+.container {
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+img {
+    display: block;
+    width: 300px;
+    height: 400px;
+    object-position: center;
+    object-fit: cover;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.infinite-line {
+    margin: 50px auto;
+    max-width: 60%;
+    overflow: hidden;
+    border: 5px solid orange;
+    border-radius: 10px;
+}
+.infinite-line div {
+    display: flex;
+    width: 250%;
+    animation: infinite-loop 4s linear infinite;
+} 
+.infinite-line div h1 {
+    text-wrap: nowrap;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    width: 100%;
+}
+.infinite-line div h1 orange {
+    color: orange;
+}
+.infinite-line div h1 brown {
+    color: rgba(92, 31, 0, 0.847);
+}
+@keyframes infinite-loop {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
